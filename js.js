@@ -62,7 +62,7 @@ function game(){
   for(let i = 0; i < 5; i++){
     
     const computerSelection = getComputerChoice();
-    const playerSelection = prompt("Enter your move")
+    const playerSelection = prompt("Enter your move: rock, paper, scissors")
     let wins = playRound(playerSelection, computerSelection);
     if (wins == 1){
       player += 1;
