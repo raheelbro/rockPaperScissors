@@ -1,0 +1,75 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #2a2a2a;
+  
+  font-family: 'Ubuntu', helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.heading-section{
+  margin: 5px auto;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.container{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  margin: 10px auto;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.score-section{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin: 10px auto;
+  width: 300px;
+  padding: 10px;
+  
+
+}
+
+
+.player-score, .computer-score{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player-name, .computer-name{
+  font-weight:600;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+.p-score-count, .c-score-count{
+  font-weight:300;
+  font-size: 30px;
+}
+
+.list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  
+}
+
+.stone-img, .paper-img, .scissors-img{
+  width: 100px;
+  height: 100px;
+  cursor:pointer;
+  user-select: none;
+}
+
+
