@@ -9,49 +9,17 @@ function getComputerChoice() {
 }
 
 
+const listItems = document.querySelectorAll('.btn');
+
+listItems.addEventListener('click',console.log('hellow world'));
+
+
+
 
 function playRound(playerSelection, computerSelection) {
   let p = playerSelection.toLowerCase();
   let c = computerSelection.toLowerCase();
 
-  if (p === c) {
-    console.log(`You: ${p}\nComputer: ${c}`);
-
-    console.log("😐Tied😐\n");
-  }
-  else if (p === "rock" && c === "paper") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😡You Lose! Paper Beats Rock😡");
-    return 2;
-  }
-  else if (p === "rock" && c === "scissors") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😎You Win! Rock Beats Scissors😎");
-    return 1;
-  }
-  else if (p === "paper" && c === "rock") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😎You Win! Paper Beats Rock😎");
-    return 1;
-  }
-  else if (p === "paper" && c === "scissors") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😡You Lose! Scissors Beat Paper😡");
-    return 2;
-  }
-  else if (p === "scissors" && c === "rock") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😡You Lose! Rock Beats Scissors😡");
-    return 2;
-  }
-  else if (p === "scissors" && c === "paper") {
-    console.log(`You: ${p}\nComputer: ${c}`);
-    console.log("😎You Win! Scissors Beat Paper😎");
-    return 2;
-  }
-  else {
-    console.log("Invalid Entry");
-  }
 }
 
 function game() {
