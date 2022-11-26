@@ -1,6 +1,3 @@
-// console.log("hello world");
-
-
 
 function getComputerChoice() {
   let textArray = ["rock", "paper", "scissors"];
@@ -9,9 +6,11 @@ function getComputerChoice() {
 }
 
 
-const listItems = document.querySelectorAll('.btn');
+const listItems = document.querySelectorAll('.list-item img');
+// console.log(listItems);
 
-listItems.addEventListener('click',console.log('hellow world'));
+let array = [...listItems];
+console.log(array[1].alt);
 
 
 
@@ -22,12 +21,4 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-function game() {
-  console.log("Let's play Rock, Paper, Scissors!")
 
-
-}
-
-
-
-game();
