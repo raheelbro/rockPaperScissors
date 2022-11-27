@@ -90,7 +90,7 @@ body {
 .player-option,
 .computer-option {
   width: 200px;
-  
+
   border-radius: 100px;
   height: 100px;
   margin: 2px;
@@ -100,4 +100,13 @@ body {
   align-items: center;
   font-family: monospace;
   font-size: 20px;
+}
+
+.win {
+  width: 520px;
+  height: 240px;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
