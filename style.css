@@ -1,23 +1,23 @@
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #2a2a2a;
-  
-  font-family: 'Ubuntu', helvetica, sans-serif;
+
+  font-family: "Ubuntu", helvetica, sans-serif;
   font-size: 16px;
 }
 
-.heading-section{
+.heading-section {
   margin: 5px auto;
   font-weight: bolder;
   font-size: 50px;
 }
 
-.container{
+.container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   width: auto;
@@ -27,54 +27,53 @@ body{
   padding: 20px;
 }
 
-.score-section{
+.score-section {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
   margin: 10px auto;
   width: 300px;
   padding: 10px;
-  
-
 }
 
-
-.player-score, .computer-score{
+.player-score,
+.computer-score {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.player-name, .computer-name{
-  font-weight:600;
+.player-name,
+.computer-name {
+  font-weight: 600;
   font-size: 30px;
   padding: 10px 0;
 }
 
-.p-score-count, .c-score-count{
-  font-weight:300;
+.p-score-count,
+.c-score-count {
+  font-weight: 300;
   font-size: 30px;
 }
 
-.list{
+.list {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 500px;
-  
 }
 
-.stone-img, .paper-img, .scissors-img{
+.stone-img,
+.paper-img,
+.scissors-img {
   width: 100px;
   height: 100px;
-  cursor:pointer;
+  cursor: pointer;
   user-select: none;
 }
 
-
-.item-clicked{
+.item-clicked {
   transform: scale(1.1);
   /* transition: all 0.1s; */
-  
 }
