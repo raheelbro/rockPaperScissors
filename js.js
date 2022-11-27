@@ -7,10 +7,45 @@ function getComputerChoice() {
 
 
 const listItems = document.querySelectorAll('.list-item img');
-// console.log(listItems);
+const li = document.querySelector('.list-item');
+//console.log(li.classList.add('item-clicked'));
 
-let array = [...listItems];
-console.log(array[1].alt);
+
+  listItems.forEach(item => {
+    item.addEventListener('click',()=> {
+
+      item.classList.toggle('item-clicked');
+      setTimeout(()=> {
+        item.classList.toggle('item-clicked');
+      }, 100)
+      
+      if(item.alt == 'rock' || item.alt == 'paper' || item.alt == 'scissors'){
+        playerSelection = item.alt.toLowerCase();
+        console.log(playerSelection);
+      }
+      // else if(item.alt == 'paper'){
+
+      // }
+     //  console.log(item.alt);
+      
+    });
+
+
+    
+
+        
+    
+  });
+
+
+
+// let array = [...listItems];
+// //console.log(array[1].alt);
+
+// array.forEach(item => {
+//   console.log(typeof(item.alt));
+
+// });
 
 
 
