@@ -1,4 +1,5 @@
 function getComputerChoice() {
+  // returns random option from array of choices
   let textArray = ["rock", "paper", "scissors"];
   let randomElement = textArray[Math.floor(Math.random() * textArray.length)];
   return randomElement;
@@ -6,7 +7,9 @@ function getComputerChoice() {
 
 const listItems = document.querySelectorAll(".list-item img");
 const li = document.querySelector(".list-item");
-//console.log(li.classList.add('item-clicked'));
+const playerOption = document.querySelector(".player-option");
+const computerOption = document.querySelector(".computer-option");
+
 let turns = 0;
 
 listItems.forEach((item) => {
@@ -18,11 +21,17 @@ listItems.forEach((item) => {
 
     if (item.alt == "rock" || item.alt == "paper" || item.alt == "scissors") {
       playerSelection = item.alt.toLowerCase();
+
       // console.log("player: ", playerSelection);
       // console.log("computer", getComputerChoice());
     }
+    computerSelection = getComputerChoice();
+    playerOption.textContent = playerSelection.toUpperCase();
+    computerOption.textContent = computerSelection.toUpperCase();
 
-    playRound(playerSelection, getComputerChoice());
+    console.log(playerOption);
+
+    playRound(playerSelection, computerSelection);
   });
 });
 
@@ -45,6 +54,9 @@ function playRound(playerSelection, computerSelection) {
   ) {
     console.log("player: ", p);
     console.log("computer: ", c);
+    document.querySelector(".computer-option").style.backgroundColor =
+      "#1de256";
+    document.querySelector(".player-option").style.backgroundColor = "#f34649";
 
     computerScore = computerScore + 1;
     document.querySelector(".c-score-count").textContent = computerScore;
@@ -54,6 +66,10 @@ function playRound(playerSelection, computerSelection) {
     (p == "paper" && c == "rock") ||
     (p == "scissors" && c == "paper")
   ) {
+    document.querySelector(".player-option").style.backgroundColor = "#1de256";
+    document.querySelector(".computer-option").style.backgroundColor =
+      "#f34649";
+
     console.log("player: ", p);
     console.log("computer: ", c);
     playerScore = playerScore + 1;
@@ -62,6 +78,9 @@ function playRound(playerSelection, computerSelection) {
   } else {
     console.log("player: ", p);
     console.log("computer: ", c);
+    document.querySelector(".computer-option").style.backgroundColor =
+      "#a9a9a9";
+    document.querySelector(".player-option").style.backgroundColor = "#a9a9a9";
     turns = turns + 1;
   }
 
