@@ -86,11 +86,14 @@ function playRound(playerSelection, computerSelection) {
 
   if (turns == 5) {
     if (playerScore > computerScore) {
-      console.log("You Win!");
+      document.querySelector(".score-section").textContent = "You Win!";
+      document.querySelector(".score-section").classList = "win";
     } else if (playerScore < computerScore) {
-      console.log("You Lose!");
+      document.querySelector(".score-section").textContent = "You Lose!";
+      document.querySelector(".score-section").classList = "win";
     } else {
-      console.log("Tie");
+      document.querySelector(".score-section").textContent = "It's a Tie!";
+      document.querySelector(".score-section").classList = "win";
     }
   } else {
     console.log(turns);
